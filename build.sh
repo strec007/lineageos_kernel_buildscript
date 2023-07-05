@@ -131,7 +131,7 @@ kernel_defconfig() {
             CROSS_COMPILE="$kernel_cross_compile" \
             CLANG_TRIPLE="$kernel_clang_triple" \
             CC="$kernel_cc" \
-	    "$device_name"_defconfig
+	        "$device_name"_defconfig
         cd $workdir
     fi
 }
@@ -151,7 +151,7 @@ kernel_menuconfig() {
             CROSS_COMPILE="$kernel_cross_compile" \
             CLANG_TRIPLE="$kernel_clang_triple" \
             CC="$kernel_cc" \
-	    menuconfig
+	        menuconfig
         cd $workdir
     fi
 }
