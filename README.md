@@ -4,9 +4,16 @@ Build LineageOS kernel with KernelSU (or not) without having to download unneces
 
 ## How to use
 
+Rename device configuration file to `device_config.sh` before running `build.sh`, for example:
+
+```bash
+mv device_config.sh pdx203_device_config.sh # avoid conflict
+mv pdx206_device_config.sh device_config.sh # we are now building for pdx206
+```
+
 ```bash
 build.sh download_sources
-# build.sh kernel_defconfig  # optional
+# build.sh kernel_defconfig  # optional: build_kernel will check and run it for you if it can't find .config
 # build.sh kernel_menuconfig # optional: basically "make menuconfig"
 build.sh build_kernel
 build.sh make_anykernel3_zip

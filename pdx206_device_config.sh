@@ -9,7 +9,7 @@ alt_lineageos_version="lineage-20" # Are you fucking kidding me?
 
 # used by build.sh
 kernel_name="android_kernel_sony_sm8250"
-device_name="pdx203"
+device_name="pdx206"
 kernel_version="4.19.275-kernelsu-perf"
 
 # kernel source goes here
