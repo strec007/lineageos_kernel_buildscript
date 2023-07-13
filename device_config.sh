@@ -1,11 +1,10 @@
 #!/bin/sh
 
 # from LineageOS/android/default.xml
-aosp_version="android-13.0.0_r52"
-# aosp_version_2="android-13.0.0_r0.81" # There's two versions of aosp for some reason, both released on the same day
+aosp_version="android-13.0.0_r61"
 lineageos_version="lineage-20.0"
-older_lineageos_version="lineage-19.1" # Again, there's no lineage-20.0 branch in both aarch64 and arm gcc git repo for some reason
-alt_lineageos_version="lineage-20" # Are you fucking kidding me?
+older_lineageos_version="lineage-19.1" # There's no lineage-20.0 branch in both aarch64 and arm gcc git repo for some reason
+alt_lineageos_version="lineage-20" # Again? Are you fucking kidding me?
 
 # used by build.sh
 kernel_name="android_kernel_sony_sm8250"
