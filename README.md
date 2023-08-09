@@ -22,7 +22,7 @@ build.sh make_anykernel3_zip
 Or use this command to build for both `pdx203` and `pdx206`:
 
 ```bash
-rm -rf ./build && ./build.sh download_sources && ./build.sh build_kernel && ./build.sh make_anykernel3_zip && mv device_config.sh pdx203_device_config.sh && mv pdx206_device_config.sh device_config.sh && rm -rf build/android_kernel_sony_sm8250/out build/AnyKernel3 && ./build.sh download_sources && ./build.sh build_kernel && ./build.sh make_anykernel3_zip && mv device_config.sh pdx206_device_config.sh && mv pdx203_device_config.sh device_config.sh
+rm -rf ./build && ./build.sh download_sources && ./build.sh build_kernel && ./build.sh make_anykernel3_zip && mv device_config.sh pdx203_device_config.sh && mv pdx206_device_config.sh device_config.sh && rm -rf build/android_kernel_sony_sm8250/out build/AnyKernel3 && ./build.sh download_sources && ./build.sh build_kernel && ./build.sh make_anykernel3_zip && mv device_config.sh pdx206_device_config.sh && mv pdx203_device_config.sh device_config.sh && rm -rf build/android_kernel_sony_sm8250/out build/AnyKernel3 && ./build.sh download_sources
 ```
 
 ## Notices for WSL users
