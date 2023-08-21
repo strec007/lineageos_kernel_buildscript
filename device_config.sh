@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # from LineageOS/android/default.xml
-aosp_version="android-13.0.0_r61"
+aosp_version="android-13.0.0_r67"
 lineageos_version="lineage-20.0"
 older_lineageos_version="lineage-19.1" # There's no lineage-20.0 branch in both aarch64 and arm gcc git repo for some reason
 alt_lineageos_version="lineage-20" # Again? Are you fucking kidding me?
