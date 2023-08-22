@@ -47,21 +47,23 @@ add_kernelsu() {
         cd $workdir/build/$kernel_name
 	    	echo "=> Adding KernelSU to kernel source tree..."
 	    	curl -LSs "https://raw.githubusercontent.com/tiann/KernelSU/main/kernel/setup.sh" | bash -
-	    	echo "=> Configuring kprobe which is needed by KernelSU..."
-	    	sed -i -e '/^CONFIG_KPROBES$/d' \
-	        	-e '/^CONFIG_HAVE_KPROBES$/d' \
-	        	-e '/^CONFIG_KPROBE_EVENTS$/d' \
-	        	./arch/$kernel_arch/configs/"$device_name"_defconfig
-	    	cat >> ./arch/$kernel_arch/configs/"$device_name"_defconfig << EOF
+	    cd $workdir
+    fi
+    cd $workdir/build/$kernel_name
+        echo "=> Configuring kprobe which is needed by KernelSU..."
+	    sed -i -e '/^CONFIG_KPROBES$/d' \
+	    	-e '/^CONFIG_HAVE_KPROBES$/d' \
+	    	-e '/^CONFIG_KPROBE_EVENTS$/d' \
+	    	./arch/$kernel_arch/configs/"$device_name"_defconfig
+        cat >> ./arch/$kernel_arch/configs/"$device_name"_defconfig << EOF
 # Required for KernelSU
 CONFIG_KPROBES=y
 CONFIG_HAVE_KPROBES=y
 CONFIG_KPROBE_EVENTS=y
 EOF
-	    	echo "=> Adding -kernelsu to EXTRAVERSION..."
-	    	sed -i 's/\(EXTRAVERSION\s*=\s*\)/\1 -kernelsu/' ./Makefile
-	    cd $workdir
-    fi
+        echo "=> Adding -kernelsu to EXTRAVERSION..."
+	    sed -i 's/\(EXTRAVERSION\s*=\s*\)/\1 -kernelsu/' ./Makefile
+    cd $workdir
 }
 
 download_sources() {
