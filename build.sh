@@ -62,7 +62,7 @@ CONFIG_HAVE_KPROBES=y
 CONFIG_KPROBE_EVENTS=y
 EOF
         echo "=> Adding -kernelsu to EXTRAVERSION..."
-	    sed -i 's/\(EXTRAVERSION\s*=\s*\)/\1 -kernelsu/' ./Makefile
+	    sed '/EXTRAVERSION =/c\EXTRAVERSION = -kernelsu' ./Makefile
     cd $workdir
 }
 
