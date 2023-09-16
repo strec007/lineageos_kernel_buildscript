@@ -188,7 +188,7 @@ make_anykernel3_zip() {
         cd $workdir/build/AnyKernel3
             echo "=> Creating AnyKernel3 zip at $workdir/$device_name-$kernel_version-$(date +%F)-AnyKernel3.zip..."
             cp $workdir/build/$kernel_name/$kernel_build_out_prefix/arch/$kernel_arch/boot/Image .
-            zip -qr9 $workdir/$device_name-$kernel_version-$(date +%F)-AnyKernel3.zip * -x .git README.md *placeholder
+            zip -qr9 $workdir/$device_name-$kernel_version-$(date +%F)-AnyKernel3.zip * -x .git .gitignore
         cd $workdir
     fi
 }
