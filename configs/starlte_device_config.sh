@@ -7,6 +7,7 @@ alt_lineageos_version="lineage-20" # from LineageOS/android_kernel_samsung_exyno
 
 kernel_name="android_kernel_samsung_exynos9810" # LineageOS/android_kernel_samsung_exynos9810.git
 device_name="starlte" # device codename
+kernel_defconfig="exynos9810-starlte_defconfig"
 
 # from LineageOS/android_kernel_samsung_exynos9810/arch/arm64/configs/exynos9810-starlte_defconfig
 # VERSION.PATCHLEVEL.SUBLEVEL-kernelsu-CONFIG_LOCALVERSION

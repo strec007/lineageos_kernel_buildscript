@@ -54,8 +54,8 @@ add_kernelsu() {
 	    sed -i -e '/^CONFIG_KPROBES$/d' \
 	    	-e '/^CONFIG_HAVE_KPROBES$/d' \
 	    	-e '/^CONFIG_KPROBE_EVENTS$/d' \
-	    	./arch/$kernel_arch/configs/"$device_name"_defconfig
-        cat >> ./arch/$kernel_arch/configs/"$device_name"_defconfig << EOF
+	    	./arch/$kernel_arch/configs/"$kernel_defconfig"
+        cat >> ./arch/$kernel_arch/configs/"$kernel_defconfig" << EOF
 # Required for KernelSU
 CONFIG_KPROBES=y
 CONFIG_HAVE_KPROBES=y
@@ -133,7 +133,7 @@ kernel_defconfig() {
             CROSS_COMPILE="$kernel_cross_compile" \
             CLANG_TRIPLE="$kernel_clang_triple" \
             CC="$kernel_cc" \
-	        "$device_name"_defconfig
+	        "$kernel_defconfig"
         cd $workdir
     fi
 }

@@ -7,6 +7,7 @@ alt_lineageos_version="lineage-20" # from LineageOS/android_kernel_sony_sm8250.g
 
 kernel_name="android_kernel_sony_sm8250" # LineageOS/android_kernel_sony_sm8250.git
 device_name="pdx206" # device codename
+kernel_defconfig="pdx206_defconfig"
 
 # from LineageOS/android_kernel_sony_sm8250/arch/arm64/configs/pdx203_defconfig
 # VERSION.PATCHLEVEL.SUBLEVEL-kernelsu-CONFIG_LOCALVERSION
