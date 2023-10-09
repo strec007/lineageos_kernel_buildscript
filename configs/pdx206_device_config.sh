@@ -1,17 +1,18 @@
 #!/bin/sh
 
-# from LineageOS/android/default.xml
-aosp_version="android-13.0.0_r67"
-lineageos_version="lineage-20.0"
-older_lineageos_version="lineage-19.1" # There's no lineage-20.0 branch in both aarch64 and arm gcc git repo for some reason
-alt_lineageos_version="lineage-20" # Again? Are you fucking kidding me?
+aosp_version="android-13.0.0_r75" # from LineageOS/android/default.xml
+lineageos_version="lineage-20.0" # from LineageOS/android.git's branch name
+older_lineageos_version="lineage-19.1" # from LineageOS/android_prebuilts_gcc_linux-x86_{aarch64_aarch64,arm_arm}-linux-android-4.9.git's branch name
+alt_lineageos_version="lineage-20" # from LineageOS/android_kernel_sony_sm8250.git's branch name
 
-# used by build.sh
-kernel_name="android_kernel_sony_sm8250"
-device_name="pdx206"
+kernel_name="android_kernel_sony_sm8250" # LineageOS/android_kernel_sony_sm8250.git
+device_name="pdx206" # device codename
+
+# from LineageOS/android_kernel_sony_sm8250/arch/arm64/configs/pdx203_defconfig
+# VERSION.PATCHLEVEL.SUBLEVEL-kernelsu-CONFIG_LOCALVERSION
 kernel_version="4.19.275-kernelsu-perf"
 
-# kernel source goes here
+# Downloads kernel source
 download_kernel() {
     download_extract_and_clean \
 	"$kernel_name" \
@@ -21,7 +22,7 @@ download_kernel() {
 	"$kernel_name-$alt_lineageos_version"
 }
 
-# AnyKernel3 configuration
+# Downloads AnyKernel3 configuration
 download_anykernel3() {
 	download_extract_and_clean \
 	"AnyKernel3" \
@@ -46,7 +47,8 @@ path_override="PATH=$workdir/build/prebuilts/gcc/linux-x86/aarch64/aarch64-linux
 			   PERL5LIB=$workdir/build/prebuilts/tools-lineage/common/perl-base \
 			   BISON_PKGDATADIR=$workdir/build/prebuilts/build-tools/common/bison"
 kernel_make_cmd="$workdir/build/prebuilts/build-tools/linux-x86/bin/make"
-# also from LineageOS/android_device_sony_sm8250-common/BoardConfigCommon.mk
+
+# from LineageOS/android_device_sony_sm8250-common/BoardConfigCommon.mk
 kernel_make_flags="DTC_EXT=$workdir/build/prebuilts/misc/linux-x86/dtc/dtc \
 		   		   DTC_OVERLAY_TEST_EXT=$workdir/build/prebuilts/misc/linux-x86/libufdt/ufdt_apply_overlay \
 		   		   LLVM=1 \

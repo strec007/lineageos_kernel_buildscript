@@ -185,10 +185,11 @@ make_anykernel3_zip() {
         echo "=> ERROR: Kernel image is missing, have you run build.sh build_kernel ?"
         exit 1
     else
+        mkdir -p $workdir/out
         cd $workdir/build/AnyKernel3
             echo "=> Creating AnyKernel3 zip at $workdir/$device_name-$kernel_version-$(date +%F)-AnyKernel3.zip..."
             cp $workdir/build/$kernel_name/$kernel_build_out_prefix/arch/$kernel_arch/boot/Image .
-            zip -qr9 $workdir/$device_name-$kernel_version-$(date +%F)-AnyKernel3.zip * -x .git .gitignore
+            zip -qr9 $workdir/out/$device_name-$kernel_version-$(date +%F)-AnyKernel3.zip * -x .git .gitignore
         cd $workdir
     fi
 }
