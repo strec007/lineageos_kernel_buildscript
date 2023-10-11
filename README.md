@@ -5,9 +5,9 @@ Build LineageOS kernel with KernelSU (or not) without having to download unneces
 ## Supported devices
 
 - Sony Xperia 1 II (`pdx203`)
-- Sony Xperia 5 II (`pdx206`)
-- Samsung Galaxy S9 (`starlte`)
-- Samsung Galaxy S9+ (`star2lte`)
+- Sony Xperia 5 II (`pdx206`) (untested)
+- Samsung Galaxy S9 (`starlte`) (untested)
+- Samsung Galaxy S9+ (`star2lte`) (untested)
 
 ## How to use
 
