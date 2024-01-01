@@ -1,1 +1,1 @@
-configs/pdx203_device_config.sh
+./configs/pdx206_device_config.sh

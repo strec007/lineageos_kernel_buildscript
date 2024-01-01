@@ -1,6 +1,6 @@
 #!/bin/sh
 
-aosp_version="android-13.0.0_r75" # from LineageOS/android/default.xml
+aosp_version="android-13.0.0_r61" # from LineageOS/android/default.xml
 lineageos_version="lineage-20.0" # from LineageOS/android.git's branch name
 older_lineageos_version="lineage-19.1" # from LineageOS/android_prebuilts_gcc_linux-x86_{aarch64_aarch64,arm_arm}-linux-android-4.9.git's branch name
 alt_lineageos_version="lineage-20" # from LineageOS/android_kernel_sony_sm8250.git's branch name
@@ -9,9 +9,9 @@ kernel_name="android_kernel_sony_sm8250" # LineageOS/android_kernel_sony_sm8250.
 device_name="pdx206" # device codename
 kernel_defconfig="pdx206_defconfig"
 
-# from LineageOS/android_kernel_sony_sm8250/arch/arm64/configs/pdx203_defconfig
+# from LineageOS/android_kernel_sony_sm8250/arch/arm64/configs/pdx206_defconfig
 # VERSION.PATCHLEVEL.SUBLEVEL-kernelsu-CONFIG_LOCALVERSION
-kernel_version="4.19.275-kernelsu-perf"
+kernel_version="4.19.275-ksu-perf"
 
 # Downloads kernel source
 download_kernel() {
