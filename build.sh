@@ -61,8 +61,8 @@ CONFIG_KPROBES=y
 CONFIG_HAVE_KPROBES=y
 CONFIG_KPROBE_EVENTS=y
 EOF
-        echo "=> Adding -kernelsu to EXTRAVERSION..."
-	    sed -i '/EXTRAVERSION =/c\EXTRAVERSION = -kernelsu' ./Makefile
+        echo "=> Adding -ksu to EXTRAVERSION..."
+	    sed -i '/EXTRAVERSION =/c\EXTRAVERSION = -ksu' ./Makefile
     cd $workdir
 }
 
