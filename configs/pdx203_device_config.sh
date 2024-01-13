@@ -1,6 +1,6 @@
 #!/bin/sh
 
-aosp_version="android-13.0.0_r61" # from LineageOS/android/default.xml
+aosp_version="android-13.0.0_r75" # from LineageOS/android/default.xml
 lineageos_version="lineage-20.0" # from LineageOS/android.git's branch name
 older_lineageos_version="lineage-19.1" # from LineageOS/android_prebuilts_gcc_linux-x86_{aarch64_aarch64,arm_arm}-linux-android-4.9.git's branch name
 alt_lineageos_version="lineage-20" # from LineageOS/android_kernel_sony_sm8250.git's branch name
