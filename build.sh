@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+set -xe
 
 export workdir=$PWD
 . $(dirname "$0")/device_config.sh
@@ -112,9 +112,9 @@ download_sources() {
 
     download_kernel
 
-    [ $want_kernelsu = "true" ] && add_kernelsu
+    [ $want_kernelsu = "true" ] && add_kernelsu || true
 
-    download_anykernel3
+    [ $want_anykernel = "true" ] && download_anykernel3 || true
 }
 
 kernel_defconfig() {
