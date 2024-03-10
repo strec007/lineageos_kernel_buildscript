@@ -1,1 +1,1 @@
-./configs/pdx206_device_config.sh
+configs/FP4_device_config.sh

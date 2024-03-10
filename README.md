@@ -1,3 +1,6 @@
+# THIS WON'T WORK FOR FP4 LINEAGEOS (FOR MICROG) WHOLE SYSTEM MUST PROBABLY BE BUILT
+
+
 # lineageos_kernel_buildscript
 
 Build LineageOS kernel with KernelSU (or not) without having to download unnecessary AOSP or LineageOS source code.

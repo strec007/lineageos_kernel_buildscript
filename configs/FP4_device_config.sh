@@ -8,19 +8,21 @@ alt_lineageos_version="lineage-20" # from LineageOS/android_kernel_sony_sm8250.g
 kernel_name="android_kernel_fairphone_sm7225" # LineageOS/android_kernel_sony_sm8250.git
 device_name="FP4" # device codename
 kernel_defconfig="vendor/lito-perf_defconfig vendor/debugfs.config vendor/fairphone/FP4.config"
+kernel_defconfig_ksu="vendor/fairphone/FP4.config"
 
 # from LineageOS/android_kernel_sony_sm8250/arch/arm64/configs/pdx206_defconfig
 # VERSION.PATCHLEVEL.SUBLEVEL-kernelsu-CONFIG_LOCALVERSION
 kernel_version="4.19.304-ksu-perf"
+git_commit="10f182ae4e38"
 
 # Downloads kernel source
 download_kernel() {
     download_extract_and_clean \
 	"$kernel_name" \
 	"$kernel_name-$alt_lineageos_version.tar.gz" \
-	"https://github.com/LineageOS/$kernel_name/archive/refs/heads/$alt_lineageos_version.tar.gz" \
+   "https://github.com/LineageOS/$kernel_name/archive/$git_commit.tar.gz" \
 	"github" \
-	"$kernel_name-$alt_lineageos_version"
+	"$kernel_name-\*"
 }
 
 # Downloads AnyKernel3 configuration
@@ -28,7 +30,7 @@ download_anykernel3() {
 	download_extract_and_clean \
 	"AnyKernel3" \
 	"AnyKernel3-$device_name.tar.gz" \
-	"https://github.com/th1nhhdk/AnyKernel3/archive/refs/heads/$device_name.tar.gz" \
+	"https://github.com//AnyKernel3/archive/refs/heads/$device_name.tar.gz" \
 	"github" \
 	"AnyKernel3-$device_name"
 }

@@ -54,8 +54,8 @@ add_kernelsu() {
 	    sed -i -e '/^CONFIG_KPROBES$/d' \
 	    	-e '/^CONFIG_HAVE_KPROBES$/d' \
 	    	-e '/^CONFIG_KPROBE_EVENTS$/d' \
-	    	./arch/$kernel_arch/configs/"$kernel_defconfig"
-        cat >> ./arch/$kernel_arch/configs/"$kernel_defconfig" << EOF
+	    	./arch/$kernel_arch/configs/"$kernel_defconfig_ksu"
+        cat >> ./arch/$kernel_arch/configs/"$kernel_defconfig_ksu" << EOF
 # Required for KernelSU
 CONFIG_KPROBES=y
 CONFIG_HAVE_KPROBES=y
